@@ -24,15 +24,24 @@ VALUES
 ('Lift Operator', '27000.00', 5),
 ('Operations Lead', '34000.00', 5),
 ('Terrain Park Attendant', '28000.00', 6),
-('SnowCAT Driver', '55000.00', 6),
 ('Security', '35000.00', 7),
 ('Office Manager', '36000.00', 8),
 ('Kitchen Manager', '38000.00', 8),
-('Shop Manager', '33000.00', 8)
+('Shop Manager', '33000.00', 8),
 ('Operations Manager', '38000.00', 8),
+('SnowCAT Operator', '55000.00', 8),
 ('General Manager', '62000.00', 8);
 
 SELECT * FROM role;
 
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES
+('Geoff', 'Grupo', 15);
+('Alexis', 'Cammack', 14);
+
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES
+('John', 'Mohr', 9, 1);
+
+SELECT * FROM employee;

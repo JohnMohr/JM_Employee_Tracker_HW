@@ -9,7 +9,7 @@ function addEmployee(connection, cb) {
                 {
                     name: "first_name",
                     type: "input",
-                    default: "Ann",
+                    default: "A",
                     message: "What is the employee's first name?",
                     validate: function (answer) {
                         if (answer.length < 1) {
@@ -21,7 +21,7 @@ function addEmployee(connection, cb) {
                 {
                     name: "last_name",
                     type: "input",
-                    default: "Pleasant",
+                    default: "J",
                     message: "What is the employee's last name?",
                     validate: function (answer) {
                         if (answer.length < 1) {

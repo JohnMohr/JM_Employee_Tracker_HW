@@ -43,7 +43,8 @@ function start() {
         .then(function (answer){
             switch (answer.action) {
                 case "Add Employee":
-                    
+
+                    break;
                 case "View Employees":
                     employee.viewAllEmployees(connection, start);
                     break;
@@ -51,10 +52,19 @@ function start() {
                     ViewEmployeeDept();
                     break;
 
+                
+                case "Add Employee":
+
+                    break;
+                case "Add Employee":
+
+                    break;
+
+                
+                
                 case "Exit":
                     connection.end();
                     break;
-
             }
         })
 }
