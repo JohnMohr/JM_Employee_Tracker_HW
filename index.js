@@ -1,6 +1,6 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
-const { start } = require('repl');
+// const { start } = require('repl');
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -23,13 +23,27 @@ function start() {
             type: "list",
             message: "What do you want to do?",
             choices: [
+                "Add Employee",
+                "Remove Employee",
                 "View Employees",
                 "View Employees by Department",
+                "View Employees by Manager",
+                "Update Employee",
+                "Update Employee Manager",
+                "Update Employee Role",
+                "Add Role",
+                "Remove Role",
+                "View All Roles",
+                "Add Department",
+                "Remove Department",
+                "View All Departments",  
                 "Exit",
             ]
         })
         .then(function (answer){
             switch (answer.action) {
+                case "Add Employee":
+                    
                 case "View Employees":
                     employee.viewAllEmployees(connection, start);
                     break;
