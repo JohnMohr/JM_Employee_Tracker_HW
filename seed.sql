@@ -1,47 +1,52 @@
-USE employees_db;
-
 INSERT INTO department (name)
 VALUES
 ('Office'),
-('Food Service'),
-('Retail')
-('Custodial')
-('Operations'),
-('Terrain'),
-('Security'),
-('Management');
+('Front of House'),
+('Back of House'),
+('Brewers'),
+('Custodial');
 
 SELECT * FROM department;
 
 INSERT INTO role (title, salary, department_id)
 VALUES
-('Ticket Sales', '28000.00', 1),
-('Lodge Cat', '00009.00', 1),
-('E-Lodge Cook', '33000.00', 2),
-('Line Cook', '24000.00', 2),
-('Retail', '25000.00', 3),
-('Custodial', '30000.00', 4),
-('Lift Operator', '27000.00', 5),
-('Operations Lead', '34000.00', 5),
-('Terrain Park Attendant', '28000.00', 6),
-('Security', '35000.00', 7),
-('Office Manager', '36000.00', 8),
-('Kitchen Manager', '38000.00', 8),
-('Shop Manager', '33000.00', 8),
-('Operations Manager', '38000.00', 8),
-('SnowCAT Operator', '55000.00', 8),
-('General Manager', '62000.00', 8);
+('Admin', '45000.00', 1),
+('Admin Cat', '00009.00', 1),
+('Host', '24000.00', 2),
+('Busser', '25000.00', 2),
+('Server', '31000.00', 2),
+('Bartender', '37000.00', 2),
+('FoH Manager', '47000.00', 2),
+('Dish Pit', '27000.00', 3),
+('Prep Cook', '28000.00', 3),
+('Line Cook', '29000.00', 3),
+('Line Lead', '32000.00', 3),
+('Head Chef', '57000.00', 3),
+('Brewer', '33000.00', 4),
+('Head Brewer', '46000.00', 4),
+('Deep Cleaners', '33000.00', 5),
 
 SELECT * FROM role;
 
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES
-('Geoff', 'Grupo', 15);
-('Alexis', 'Cammack', 14);
+('Space', 'Ghost', 12),
+('Zorak', 'Mantis', 7),
+('Moltar', 'Coast', 14);
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-('John', 'Mohr', 9, 1);
+('Moltar', 'Coast', 1, 1),
+('Scrilla', 'the Cat', 2, 2),
+('Brak', 'Coast', 4, 1),
+('Chad', 'Ghostal',5, 1),
+('Creature', 'King', 6, 1),
+('Sisto', 'Coast', 8, 1),
+('Gorilla', 'Gorilla', 9, 1),
+('Marky', 'Mark', 10, 1),
+('John', 'Mohr', 11, 1),
+('Tyler','Creator',13, 3)
+('Michael','Jordan',15, 1)
 
 SELECT * FROM employee;

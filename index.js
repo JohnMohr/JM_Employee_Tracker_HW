@@ -1,5 +1,8 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
+const view = require('./utils/view');
+const add = require('./utils/add');
+const update = require('./utils/update');
 // const { start } = require('repl');
 
 const connection = mysql.createConnection({
@@ -28,9 +31,8 @@ function start() {
                 "View Employees",
                 "View Employees by Department",
                 "View Employees by Manager",
-                "Update Employee",
-                "Update Employee Manager",
                 "Update Employee Role",
+                "Update Employee Manager",
                 "Add Role",
                 "Remove Role",
                 "View All Roles",
@@ -43,25 +45,44 @@ function start() {
         .then(function (answer){
             switch (answer.action) {
                 case "Add Employee":
-
+                    add.addEmployee(connection, start);
+                    break;
+                case "Remove Employee":
+                    update.removeEmployee(connection, start);
                     break;
                 case "View Employees":
-                    employee.viewAllEmployees(connection, start);
+                    view.viewAllEmployees(connection, start);
                     break;
                 case "View Employees by Department":
-                    ViewEmployeeDept();
+                    view.ViewEmployeeDept(connection, start);
                     break;
-
-                
-                case "Add Employee":
-
+                case "View Employees by Manager":
+                    view.viewEmployeeMgr(connection, start);
                     break;
-                case "Add Employee":
-
+                case "Update Employee Role":
+                    update.updateRole(connection, start);
                     break;
-
-                
-                
+                case "Update Employee Manager":
+                    update.updateManager(connection, start);
+                    break;
+               case "Add Role":
+                   add.addRole(connection, start);
+                   break;
+                case "Remove Role":
+                    update.removeRole(connection, start);
+                    break;
+                case "View All Roles":
+                    view.viewRoles(connection, start);
+                    break;
+                case "Add Department":
+                    add.addDepartment(connection, start);
+                    break;
+                case "Remove Department":
+                    update.removeDepartment(connection, start);
+                    break;
+                case "View All Departments":
+                    view.viewDepartments(connection, start);
+                    break;
                 case "Exit":
                     connection.end();
                     break;
