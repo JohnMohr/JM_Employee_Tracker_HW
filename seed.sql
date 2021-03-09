@@ -6,8 +6,6 @@ VALUES
 ('Brewers'),
 ('Custodial');
 
-SELECT * FROM department;
-
 INSERT INTO role (title, salary, department_id)
 VALUES
 ('Admin', '45000.00', 1),
@@ -24,9 +22,7 @@ VALUES
 ('Head Chef', '57000.00', 3),
 ('Brewer', '33000.00', 4),
 ('Head Brewer', '46000.00', 4),
-('Deep Cleaners', '33000.00', 5),
-
-SELECT * FROM role;
+('Deep Cleaners', '33000.00', 5);
 
 INSERT INTO employee (first_name, last_name, role_id)
 VALUES
@@ -37,7 +33,7 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-('Moltar', 'Coast', 1, 1),
+('Moltar', 'Coastal', 1, 1),
 ('Scrilla', 'the Cat', 2, 2),
 ('Brak', 'Coast', 4, 1),
 ('Chad', 'Ghostal',5, 1),
@@ -46,7 +42,5 @@ VALUES
 ('Gorilla', 'Gorilla', 9, 1),
 ('Marky', 'Mark', 10, 1),
 ('John', 'Mohr', 11, 1),
-('Tyler','Creator',13, 3)
-('Michael','Jordan',15, 1)
-
-SELECT * FROM employee;
+('Tyler','Creator',13, 3),
+('Michael','Jordan',15, 1);
